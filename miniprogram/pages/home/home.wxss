@@ -1,0 +1,52 @@
+/* pages/home/home.wxss */
+.top {
+    height: 160rpx;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 40rpx;
+}
+
+.top-icon {
+    font-size: 60rpx;
+}
+
+.top-text {
+    margin-top: -2rpx;
+    margin-left: 14rpx;
+}
+
+.task-list {
+
+}
+
+.task-item {
+  border-bottom: 1rpx solid var(--border);
+}
+
+.task-item:last-child {
+  border-bottom: 0;
+}
+
+.task-list-top {
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  color: #666;
+  border-bottom: 1rpx solid var(--border);
+  background-color: #efefef;
+}
+
+.task-list-left {
+
+}
+
+.task-list-right {
+
+}
+

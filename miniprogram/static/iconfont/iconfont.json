@@ -1,0 +1,37 @@
+{
+  "id": "1535590",
+  "name": "task-go",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "672037",
+      "name": "下一步",
+      "font_class": "xiayibu",
+      "unicode": "e6ba",
+      "unicode_decimal": 59066
+    },
+    {
+      "icon_id": "1337776",
+      "name": "add",
+      "font_class": "add",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "1526269",
+      "name": "任务",
+      "font_class": "renwu",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "4630553",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    }
+  ]
+}

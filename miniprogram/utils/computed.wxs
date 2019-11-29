@@ -1,0 +1,40 @@
+// 格式化金额
+var moneyFormat = function(money) {
+  if (!money) return '0.00'
+  var str = ((Math.floor(money * 100) / 100) + '').split('.')
+
+  return str[0] + '.' + (str[1] ? (str[1].length === 1 ? (str[1] + '0') : str[1]) : '00')
+}
+
+module.exports.moneyFormat = moneyFormat
+
+// 手机 133****9999
+var phoneFormat = function(phone) {
+  if (!phone) return ''
+
+  return phone.slice(0, 3) + '****' + phone.slice(-4)
+}
+
+module.exports.phoneFormat = phoneFormat
+
+// 时间戳转时间 2019-06-26 15:12:09
+var fill = function(num) {
+  return num < 10 ? ('0' + num) : ('' + num)
+}
+var timeFormat = function(time, params) {
+  if (time < (Date.now() / 10)) time = time * 1000
+  var date = getDate(time)
+
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hours = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+
+  var str = year + '-' + fill(month) + '-' + fill(day) + ' ' + fill(hours) + ':' + fill(minute) + ':' + fill(second)
+
+  return str.slice(params.slice1 || 0, params.slice2)
+}
+
+module.exports.timeFormat = timeFormat

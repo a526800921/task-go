@@ -1,0 +1,38 @@
+[
+  {
+    "name": "getTasks",
+    "value": {
+      "method": "GET",
+      "path": "getTaskList",
+      "payload": {
+        "page": 1,
+        "pageSize": 10
+      }
+    }
+  },
+  {
+    "name": "post",
+    "value": {
+      "method": "POST",
+      "payload": {
+        "title": "payload.title",
+        "description": "payload.description",
+        "startTime": 1575998113536,
+        "maxPeople": 10
+      }
+    }
+  },
+  {
+    "name": "postTask",
+    "value": {
+      "method": "POST",
+      "path": "addTask",
+      "payload": {
+        "title": "payload.title",
+        "description": "payload.description",
+        "startTime": 1575998113536,
+        "maxPeople": 10
+      }
+    }
+  }
+]

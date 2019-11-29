@@ -1,0 +1,56 @@
+<!--miniprogram/pages/add-task/add-task.wxml-->
+<view class="add-task-title">
+  <input 
+    class="add-task-title-input" 
+    type="text" 
+    placeholder="请输入任务标题" 
+    focus 
+    confirm-type="next"
+    maxlength="{{20}}"
+  ></input>
+</view>
+
+<view class="add-task-main">
+  <textarea 
+    class="add-task-main-textarea textarea-ios-diff" 
+    placeholder="请输入任务描述"
+    maxlength="{{300}}"
+  ></textarea>
+
+  <view style="height: 20rpx;"></view>
+
+  <picker
+    class="add-task-main-picker"
+    mode="date"
+    start="{{computed.timeFormat(startDay, { slice2: 10 })}}"
+    end="{{computed.timeFormat(endDay, { slice2: 10 })}}"
+  >
+    <view class="placeholder">
+      <text>请选择任务开始日期</text>
+      <text class="iconfont iconxiayibu"></text>
+    </view>
+  </picker>
+
+  <picker
+    class="add-task-main-picker"
+    mode="time"
+  >
+    <view class="placeholder">
+      <text>请选择任务开始时间</text>
+      <text class="iconfont iconxiayibu"></text>
+    </view>
+  </picker>
+
+  <view class="add-task-main-slider">
+    <text>请选择任务可参与人数</text>
+    <slider 
+      min="1" 
+      max="100"
+      value="{{10}}"
+      activeColor="#f09a37"
+      show-value
+    ></slider>
+  </view>
+</view>
+
+<wxs src="../../utils/computed.wxs" module="computed"></wxs>

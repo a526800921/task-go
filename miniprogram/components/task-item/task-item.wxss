@@ -1,0 +1,34 @@
+/* components/task-item/task-item.wxss */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  height: 120rpx;
+  box-sizing: border-box;
+}
+
+.task-item-left {
+  padding-right: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.task-item-right-num {
+  color: #333;
+}
+
+.task-item-right-time {
+  font-size: 24rpx;
+  margin-top: 4rpx;
+  color: #666;
+}
+

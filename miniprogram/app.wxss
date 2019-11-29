@@ -1,0 +1,32 @@
+@import './static/iconfont/iconfont.wxss'
+
+view,
+button,
+text {
+  --primary: #f09a37;
+  --default: #aeaeae;
+  --border: #E5E5E5;
+}
+
+page {
+  height: 100%;
+}
+
+button {
+  border-radius: 0;
+  background-color: #fff;
+}
+
+button::after {
+  border: none;
+}
+
+.input-placeholder,
+.textarea-placeholder,
+.placeholder {
+  color: #999;
+}
+
+.textarea-ios-diff {
+  margin: -14rpx -10rpx;
+}
