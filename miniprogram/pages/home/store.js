@@ -62,7 +62,7 @@ const actions = {
       maxPeople: params.maxPeople || 10, // 可加入最大人数
     })
 
-    return res.status !== 200
+    return res
   },
 }
 

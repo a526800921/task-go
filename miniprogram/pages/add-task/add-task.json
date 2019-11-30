@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "login-button": "../../components/login-button/login-button"
+  },
   "navigationBarTitleText": "发布任务"
 }

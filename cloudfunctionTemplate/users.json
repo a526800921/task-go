@@ -1,0 +1,22 @@
+[
+  {
+    "name": "login",
+    "value": {
+      "method": "POST",
+      "path": "login",
+      "payload": {
+        "avatarUrl": "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ02k5A7bjKsRavptQaRZlogicmTT7ic2yq7meXFiaCSOmJSfL7bqFev2vIvw2UV5nEvvXypPenia5y3A/132",
+        "gender": 0,
+        "nickName": "Jafish"
+      }
+    }
+  },
+  {
+    "name": "getUserInfo",
+    "value": {
+      "method": "GET",
+      "path": "getUserInfo",
+      "payload": {}
+    }
+  }
+]

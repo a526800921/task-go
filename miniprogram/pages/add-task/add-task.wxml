@@ -7,6 +7,7 @@
     focus 
     confirm-type="next"
     maxlength="{{20}}"
+    bindblur="titleBlur"
   ></input>
 </view>
 
@@ -15,6 +16,7 @@
     class="add-task-main-textarea textarea-ios-diff" 
     placeholder="请输入任务描述"
     maxlength="{{300}}"
+    bindblur="descBlur"
   ></textarea>
 
   <view style="height: 20rpx;"></view>
@@ -24,21 +26,25 @@
     mode="date"
     start="{{computed.timeFormat(startDay, { slice2: 10 })}}"
     end="{{computed.timeFormat(endDay, { slice2: 10 })}}"
+    bindchange="dayChange"
   >
-    <view class="placeholder">
+    <view class="placeholder" wx:if="{{!day}}">
       <text>请选择任务开始日期</text>
       <text class="iconfont iconxiayibu"></text>
     </view>
+    <view wx:else>开始日期：{{day}}</view>
   </picker>
 
   <picker
     class="add-task-main-picker"
     mode="time"
+    bindchange="timeChange"
   >
-    <view class="placeholder">
+    <view class="placeholder" wx:if="{{!time}}">
       <text>请选择任务开始时间</text>
       <text class="iconfont iconxiayibu"></text>
     </view>
+    <view wx:else>开始时间：{{time}}</view>
   </picker>
 
   <view class="add-task-main-slider">
@@ -46,11 +52,19 @@
     <slider 
       min="1" 
       max="100"
-      value="{{10}}"
+      value="{{formData.maxPeople}}"
       activeColor="#f09a37"
       show-value
+      bindchange="peopleChange"
     ></slider>
   </view>
 </view>
+
+<login-button 
+  subclass="add-task-btn primary bottom-button {{disable ? 'disable' : ''}}" 
+  bindsubclick="submit"
+>
+  <text space="emsp">发 布</text>
+</login-button>
 
 <wxs src="../../utils/computed.wxs" module="computed"></wxs>

@@ -1,0 +1,6 @@
+<!--components/login-button/login-button.wxml-->
+<button 
+  class="subclass"
+  open-type="getUserInfo"
+  bindgetuserinfo="onClick"  
+><slot></slot></button>

@@ -51,7 +51,8 @@ module.exports = {
                         )
                     })
                     .project({ // 输出设置
-                        users: 0 // 删除users字段
+                        users: 0, // 删除users字段
+                        creator: 0, // 删除创建者openid
                     })
                     .end() // 结束
                     // .get()

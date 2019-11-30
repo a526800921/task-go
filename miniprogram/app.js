@@ -26,6 +26,9 @@ App({
 
       // 获取系统信息
       store.dispatch('Root/getSystemInfo')
+
+      // 获取用户信息
+      store.dispatch('Root/getUserInfo')
     })
   },
   onShow(e) {

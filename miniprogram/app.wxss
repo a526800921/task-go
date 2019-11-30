@@ -6,6 +6,7 @@ text {
   --primary: #f09a37;
   --default: #aeaeae;
   --border: #E5E5E5;
+  --disable: #d8d8d8;
 }
 
 page {
@@ -29,4 +30,23 @@ button::after {
 
 .textarea-ios-diff {
   margin: -14rpx -10rpx;
+}
+
+.primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.bottom-button {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 98rpx;
+}
+
+.disable {
+  background-color: var(--disable);
+  color: #999;
 }
