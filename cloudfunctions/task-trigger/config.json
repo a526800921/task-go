@@ -1,0 +1,9 @@
+{
+  "triggers": [
+    {
+      "name": "task-trigger",
+      "type": "timer",
+      "config": "0 */1 * * * * *"
+    }
+  ]
+}
