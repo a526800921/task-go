@@ -51,8 +51,14 @@ module.exports = {
                         )
                     })
                     .project({ // 输出设置
-                        users: 0, // 删除users字段
-                        creator: 0, // 删除创建者openid
+                        description: 1,
+                        maxPeople: 1,
+                        peoples: 1,
+                        startTime: 1,
+                        status: 1,
+                        title: 1,
+                        id: '$_id',
+                        _id: 0,
                     })
                     .end() // 结束
                     // .get()
@@ -62,7 +68,7 @@ module.exports = {
                 else return successPayload(list.list.map(item => {
 
                     return item
-                }))
+                }), '查询成功')
             })
             .catch(msg => failPayload(null, `查询失败：${msg}`))
     },

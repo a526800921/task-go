@@ -3,7 +3,9 @@
     "pages/home/home",
     "pages/profile/profile",
     "pages/add-task/add-task",
-    "pages/task-detail/task-detail"
+    "pages/task-detail/task-detail",
+    "pages/my-create-task/my-create-task",
+    "pages/my-join-task/my-join-task"
   ],
   "tabBar": {
     "color": "#aeaeae",

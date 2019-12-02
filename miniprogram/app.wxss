@@ -7,6 +7,8 @@ text {
   --default: #aeaeae;
   --border: #E5E5E5;
   --disable: #d8d8d8;
+  --success: #07c160;
+  --fail: #F76260;
 }
 
 page {
@@ -50,3 +52,9 @@ button::after {
   background-color: var(--disable);
   color: #999;
 }
+
+.fail {
+  background-color: var(--fail);
+  color: #fff;
+}
+

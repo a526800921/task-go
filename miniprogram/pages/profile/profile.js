@@ -1,11 +1,25 @@
 // miniprogram/pages/profile.js
-Page({
+global._Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    menus: [
+      {
+        title: '我发布的任务',
+        path: '/pages/my-create-task/my-create-task'
+      },
+      {
+        title: '我参与的任务',
+        path: '/pages/my-join-task/my-join-task'
+      },
+    ]
+  },
+  goPage(e) {
+    const { path } = e.currentTarget.dataset.item
 
+    if (path) this.$router.push(path)
   },
 
   /**

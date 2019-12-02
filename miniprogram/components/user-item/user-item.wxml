@@ -1,0 +1,9 @@
+<!--components/user-item/user-item.wxml-->
+<view class="user-item">
+  <view class="user-item-left">
+    <image src="{{user.avatarUrl}}"></image>
+    <text>{{user.nickName}}</text>
+  </view>
+
+  <view class="user-item-right"><slot></slot></view>
+</view>

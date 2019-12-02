@@ -21,7 +21,7 @@ if (typeof __wxConfig == "object") {
 const state = {
   env,
   systemInfo: {}, // 设备信息
-  pageSize: 10, // 全局分页大小
+  pageSize: 20, // 全局分页大小
 
   userInfo: {}, // 用户信息
 }
@@ -51,12 +51,12 @@ const actions = {
 
     return res
   },
-  async login({ state, dispatch }, userInfo)  {
+  async login({ state, dispatch }, userInfo = {})  {
     // 登录
     //   userInfo.avatarUrl
     //   userInfo.nickName
     //   userInfo.gender // 性别 0：未知、1：男、2：女
-    if (!userInfo) return {}
+    // if (!userInfo) return {}
     
     const { avatarUrl, nickName, gender } = userInfo
 

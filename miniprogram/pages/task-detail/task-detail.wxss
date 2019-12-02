@@ -1,1 +1,109 @@
 /* miniprogram/pages/task-detail/task-detail.wxss */
+.task-detail-title {
+  font-size: 40rpx;
+  height: 80rpx;
+  border-bottom: 1rpx solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  position: relative;
+  z-index: 0;
+  color: #333;
+}
+
+.task-detail-title-desc {
+  position: absolute;
+  right: 20rpx;
+  top: 10rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.task-detail-info {
+  padding: 20rpx;
+  border-bottom: 1rpx solid var(--border);
+}
+
+.task-detail-creator {
+  flex: 1;
+}
+
+.task-detail-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.task-detail-right text:first-child {
+  color: #333;
+}
+
+.task-detail-right text:last-child {
+  font-size: 24rpx;
+  margin-top: 4rpx;
+  color: #666;
+}
+
+.task-detail-main {
+  min-height: 400rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  border-bottom: 1rpx solid var(--border);
+}
+
+.task-detail-main text:last-child {
+  margin-top: 10rpx;
+  text-indent: 2em;
+}
+
+.task-detail-create {
+  padding: 20rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color: #999;
+  border-bottom: 1rpx solid var(--border);
+}
+
+.task-detail-proples {
+
+}
+
+.task-detail-proples-title {
+  padding: 20rpx;
+}
+
+.task-detail-proples-item {
+  padding: 20rpx;
+}
+
+.task-detail-proples-status {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.task-detail-proples-status text {
+  font-size: 40rpx;
+}
+
+.task-detail-proples-success {
+  color: var(--primary);
+}
+
+.task-detail-proples-run {
+  color: var(--success);
+}
+
+button.task-detail-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+

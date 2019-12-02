@@ -1,0 +1,4 @@
+<view class="task-desc-top">
+  <text class="task-desc-left">标题</text>
+  <text class="task-desc-right">人数/上限</text>
+</view>

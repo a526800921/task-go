@@ -1,0 +1,20 @@
+/* components/task-desc/task-desc.wxss */
+.task-desc-top {
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  color: #666;
+  border-bottom: 1rpx solid var(--border);
+  background-color: #efefef;
+}
+
+.task-desc-left {
+
+}
+
+.task-desc-right {
+
+}

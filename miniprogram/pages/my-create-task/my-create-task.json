@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "task-item": "../../components/task-item/task-item",
+    "task-desc": "../../components/task-desc/task-desc"
+},
+  "navigationBarTitleText": "我发布的任务"
+}

@@ -4,11 +4,8 @@
 </view>
 
 <view class="task-list">
-  <view class="task-list-top">
-    <text class="task-list-left">标题</text>
-    <text class="task-list-right">人数/上限</text>
-  </view>
-  <view class="task-item" wx:for="{{taskList}}" wx:key="index" bindtap="goTaskDetail" data-id="{{item._id}}">
+  <task-desc></task-desc>
+  <view class="task-item" wx:for="{{taskList}}" wx:key="index" bindtap="goTaskDetail" data-id="{{item.id}}">
     <task-item item="{{item}}"></task-item>
   </view>
 </view>

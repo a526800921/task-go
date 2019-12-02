@@ -1,9 +1,21 @@
 const getTaskList = require('./getTaskList')
 const addTask = require('./addTask')
+const getTaskDetail = require('./getTaskDetail')
+const joinTask = require('./joinTask')
+const outTask = require('./outTask')
+const finishTask = require('./finishTask')
+const getMyCreateTaskList = require('./getMyCreateTaskList')
+const getMyJoinTaskList = require('./getMyJoinTaskList')
 
 const gather = {
     getTaskList,
     addTask,
+    getTaskDetail,
+    joinTask,
+    outTask,
+    finishTask,
+    getMyCreateTaskList,
+    getMyJoinTaskList,
 }
 
 function getMethod(path, method) {

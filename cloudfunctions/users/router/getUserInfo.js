@@ -14,14 +14,14 @@ module.exports = {
                 // 有用户
                 if (res.data.length) {
                     const {
-                        _id,
+                        id,
                         avatarUrl,
                         nickName,
                         gender,
                     } = res.data[0]
 
                     return successPayload({
-                        id: _id,
+                        id,
                         avatarUrl,
                         nickName,
                         gender,

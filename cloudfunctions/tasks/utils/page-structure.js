@@ -2,6 +2,7 @@
 const page = {
   page: 1,
   pageSize: 10,
+  status: 1,
 }
 
 const structure = {
@@ -22,6 +23,13 @@ const structure = {
       nullMessage: 'pageSize不能为空',
       verifyMessage: 'pageSize格式有误',
     },
+    ['status']: {
+      isRequire: false,
+      type: 'number',
+      nullMessage: '状态不能为空',
+      verifyMessage: '状态格式有误',
+    },
+    
   }
 }
 

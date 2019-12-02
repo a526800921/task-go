@@ -1,0 +1,2 @@
+<!--miniprogram/pages/my-join-task/my-join-task.wxml-->
+<tabs tabs="{{tabs}}"></tabs>

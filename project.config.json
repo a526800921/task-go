@@ -46,10 +46,31 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "pages/task-detail/task-detail",
 					"pathName": "pages/task-detail/task-detail",
 					"query": "id=98ec96175de22cfd00b407bc1c83d823",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/profile",
+					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my-create-task/my-create-task",
+					"pathName": "pages/my-create-task/my-create-task",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my-join-task/my-join-task",
+					"pathName": "pages/my-join-task/my-join-task",
+					"query": "",
 					"scene": null
 				}
 			]

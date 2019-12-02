@@ -33,7 +33,7 @@ const actions = {
     }
 
     const { taskList, taskPage, taskIsEnd } = state
-    const pageSize = 20
+    const pageSize = rootState.Root.pageSize
 
     if (taskList.length && init) return taskList
     if (taskIsEnd) return taskList

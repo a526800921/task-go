@@ -1,0 +1,4 @@
+<!--components/tabs/tabs.wxml-->
+<view class="tabs">
+  <view class="tabs-item"></view>
+</view>

@@ -21,32 +21,18 @@ exports.main = async () => {
   return tasks
     .where({
       status: 1, // 未开始
-      startTime: _.lt(Date.now()), // 找到开始时间小于现在
+      startTime: _.lt(Date.now() + 1000), // 找到开始时间小于现在
     })
-    .get()
-    .then(res => {
-      if (res.data.length) {
-        // 将未开始的状态改为进行中
-        const ids = res.data.map(item => item._id)
-
-        return tasks
-          .where({
-            _id: _.in(ids)
-          })
-          .update({
-            data: {
-              status: 2,
-              updateTime: Date.now(),
-            }
-          })
-          .then(res =>
-            res.stats.updated > 0 ?
-              successPayload(ids, `修改成功`) :
-              failPayload(ids, `修改失败`)
-          )
-          .catch(err => failPayload(ids, `修改失败：${err.errMsg}`))
+    .update({
+      data: {
+        status: 2, // 将未开始的状态改为进行中
+        updateTime: Date.now(),
       }
-      else return successPayload(null, '无需要修改')
     })
-    .catch(err => failPayload(null, `修改失败：${err.errMsg}`))
+    .then(res =>
+      res.stats.updated > 0 ?
+        successPayload(null, `修改成功(个数): ${res.stats.updated}`) :
+        successPayload(null, `无需要修改`)
+    )
+    .catch(err => failPayload(err, `修改失败`))
 }

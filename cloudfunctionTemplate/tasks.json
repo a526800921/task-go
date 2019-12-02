@@ -34,5 +34,38 @@
         "maxPeople": 10
       }
     }
+  },
+  {
+    "name": "getTaskDetail",
+    "value": {
+      "method": "GET",
+      "path": "getTaskList",
+      "payload": {
+        "page": 1,
+        "pageSize": 10
+      }
+    }
+  },
+  {
+    "name": "getMyCreateTaskList",
+    "value": {
+      "method": "GET",
+      "path": "getMyCreateTaskList",
+      "payload": {
+        "page": 1,
+        "pageSize": 10
+      }
+    }
+  },
+  {
+    "name": "getMyJoinTaskList",
+    "value": {
+      "method": "GET",
+      "path": "getMyJoinTaskList",
+      "payload": {
+        "page": 1,
+        "pageSize": 10
+      }
+    }
   }
 ]

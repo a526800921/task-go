@@ -1,2 +1,72 @@
 <!--miniprogram/pages/task-detail/task-detail.wxml-->
-<text>miniprogram/pages/task-detail/task-detail.wxml</text>
+
+<block wx:if="{{taskDetail.id}}">
+  <!-- 标题 -->
+  <view class="task-detail-title">
+    <text>{{taskDetail.title}}</text>
+    <text 
+      class="task-detail-title-desc" 
+      wx:if="{{taskDetail.updateTime > taskDetail.createTime}}"
+    >更新：{{computed.timeFormat(taskDetail.updateTime, { slice2: 16 })}}</text>
+  </view>
+
+  <task-desc></task-desc>
+
+  <view class="task-detail-info">
+    <!-- 创建者 -->
+    <user-item user="{{taskDetail.creatorInfo}}">
+      <!-- 时间/人数 -->
+      <view class="task-detail-right">
+        <text>{{taskDetail.peopleList.length}} / {{taskDetail.maxPeople}}</text>
+        <text>{{computed.timeFormat(taskDetail.startTime, { slice2: 16 })}}</text>
+      </view>
+    </user-item>
+  </view>
+
+  <!-- 内容 -->
+  <view class="task-detail-main">
+    <text>任务内容：</text>
+    <text>{{taskDetail.description}}</text>
+  </view>
+
+  <!-- 发布时间 -->
+  <view class="task-detail-create">发布：{{computed.timeFormat(taskDetail.createTime, { slice2: 16 })}}</view>
+
+  <!-- 参与人员 -->
+  <view class="task-detail-proples">
+    <view class="task-detail-proples-title">参与人员：</view>
+    <view 
+      class="task-detail-proples-item" 
+      wx:for="{{taskDetail.peopleList}}" 
+      wx:key="index" 
+    >
+      <user-item user="{{item}}">
+        <!-- 任务完成状态 -->
+        <view class="task-detail-proples-status" wx:if="{{taskDetail.status !== 1}}">
+          <!-- 已完成 -->
+          <text wx:if="{{item.status !== 1}}" class="task-detail-proples-success iconfont iconsuccess"></text>
+          <!-- 未完成 -->
+          <text wx:else class="task-detail-proples-run iconfont iconrunning"></text>
+        </view>
+      </user-item>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <login-button 
+    subclass="task-detail-btn primary bottom-button {{disable === -1 ? 'disable' : disable === 2 ? 'fail' : ''}}" 
+    bindsubclick="submit"
+    wx:if="{{status !== -1}}"
+  >
+    <text wx:if="{{status === 1}}">参与任务</text>
+    <text wx:if="{{status === 2}}">退出任务</text>
+    <text wx:if="{{status === 3}}">任务即将开始</text>
+    <text wx:if="{{status === 4}}">任务进行中</text>
+    <text wx:if="{{status === 5}}">任务已结束</text>
+    <text wx:if="{{status === 6}}">我已完成任务</text>
+    <text wx:if="{{status === 7}}">任务已完成</text>
+    <text wx:if="{{status === 8}}">任务未开始</text>
+  </login-button>
+</block>
+
+<wxs module="computed" src="../../utils/computed.wxs"></wxs>

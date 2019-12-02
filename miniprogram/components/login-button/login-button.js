@@ -23,10 +23,10 @@ global._Component({
    * 组件的方法列表
    */
   methods: {
-    onClick(e) {
+    async onClick(e) {
       const { userInfo } = e.detail
       
-      if (userInfo) this.$store.dispatch('Root/login', userInfo)
+      await this.$store.dispatch('Root/login', userInfo)
 
       this.triggerEvent('subclick')
     }

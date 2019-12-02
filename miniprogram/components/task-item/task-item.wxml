@@ -1,6 +1,9 @@
 <!--components/task-item/task-item.wxml-->
 <view class="task-item">
-  <view class="task-item-left">{{item.title}}</view>
+  <view class="task-item-left">
+    <slot></slot>
+    <text>{{item.title}}</text>
+  </view>
   <view class="task-item-right">
     <text class="task-item-right-num">{{item.peoples}} / {{item.maxPeople}}</text>
     <text class="task-item-right-time">{{computed.timeFormat(item.startTime, { slice1: 0, slice2: 16 })}}</text>

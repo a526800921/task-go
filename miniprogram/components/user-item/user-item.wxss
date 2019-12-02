@@ -1,0 +1,26 @@
+/* components/user-item/user-item.wxss */
+.user-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-item-left {
+  display: flex;
+  align-items: center;
+}
+
+.user-item-left image {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+
+.user-item-left text {
+  color: #333;
+  margin-left: 20rpx;
+}
+
+.user-item-right {
+
+}
+

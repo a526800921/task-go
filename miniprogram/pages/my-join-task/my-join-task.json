@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "task-item": "../../components/task-item/task-item",
+    "task-desc": "../../components/task-desc/task-desc",
+    "tabs": "../../components/tabs/tabs"
+  },
+  "navigationBarTitleText": "我参与的任务"
+}

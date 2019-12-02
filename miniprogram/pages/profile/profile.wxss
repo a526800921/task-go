@@ -1,1 +1,61 @@
 /* miniprogram/pages/profile.wxss */
+.profile-top {
+  height: 360rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1rpx solid var(--border);
+}
+
+.profile-avatar {
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar open-data {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.profile-name {
+  margin-top: 20rpx;
+  font-size: 38rpx;
+  color: #333;
+}
+
+.profile-menus {
+
+}
+
+.profile-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 108rpx;
+  padding: 0 20rpx;
+  border-bottom: 1rpx solid var(--border);
+}
+
+.profile-item-left {
+
+}
+
+.profile-item-left text {
+  color: #333;
+}
+
+.profile-item-right {
+
+}
+
+.profile-item-right text {
+  font-size: 50rpx;
+  color: #999;
+}
+
+

@@ -37,7 +37,12 @@ module.exports = {
                             return taskUsers.add({
                                 data: {
                                     taskId: res._id,
-                                    peoples: [wxContext.OPENID],
+                                    peoples: [
+                                        {   
+                                            id: wxContext.OPENID,
+                                            status: 1,
+                                        }
+                                    ],
                                     createTime: now, // 创建时间
                                     updateTime: now, // 修改时间
                                 }

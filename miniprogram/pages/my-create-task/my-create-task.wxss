@@ -1,0 +1,26 @@
+/* miniprogram/pages/my-create-task/my-create-task.wxss */
+.my-create-task-item {
+  border-bottom: 1rpx solid var(--border);
+}
+
+.my-create-task-item:last-child {
+  border-bottom: 0;
+}
+
+.my-create-task-item .iconfont {
+  font-size: 40rpx;
+  margin-right: 14rpx;
+}
+
+.my-create-task-time {
+  color: var(--default);
+}
+
+.my-create-task-run {
+  color: var(--success);
+
+}
+
+.my-create-task-success {
+  color: var(--primary);
+}

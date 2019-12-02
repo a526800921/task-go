@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "user-item": "../../components/user-item/user-item",
+    "login-button": "../../components/login-button/login-button",
+    "task-desc": "../../components/task-desc/task-desc"
+  },
   "navigationBarTitleText": "任务详情"
 }
