@@ -52,7 +52,7 @@
     </view>
   </view>
 
-  <view style="height: 98rpx; background-color: #f99;"></view>
+  <view style="height: 98rpx;"></view>
 
   <!-- 底部按钮 -->
   <login-button 
