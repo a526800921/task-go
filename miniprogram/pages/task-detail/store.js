@@ -10,6 +10,7 @@ const getters = {
 
 const mutations = {
   ['SET_TASK_DETAIL'](state, detail) {
+
     state.taskDetail = detail
   },
 }

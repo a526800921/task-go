@@ -52,6 +52,8 @@
     </view>
   </view>
 
+  <view style="height: 98rpx; background-color: #f99;"></view>
+
   <!-- 底部按钮 -->
   <login-button 
     subclass="task-detail-btn primary bottom-button {{disable === -1 ? 'disable' : disable === 2 ? 'fail' : ''}}" 
