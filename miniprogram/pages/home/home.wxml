@@ -8,4 +8,6 @@
   <view class="task-item" wx:for="{{taskList}}" wx:key="index" bindtap="goTaskDetail" data-id="{{item.id}}">
     <task-item item="{{item}}"></task-item>
   </view>
+
+  <load-end wx:if="{{taskIsEnd}}" />
 </view>

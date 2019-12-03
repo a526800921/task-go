@@ -1,5 +1,5 @@
 // components/tabs/tabs.js
-Component({
+global._Component({
   /**
    * 组件的属性列表
    */
@@ -7,6 +7,10 @@ Component({
     tabs: {
       type: Array,
       value: []
+    },
+    current: {
+      type: Number,
+      value: 0
     }
   },
 
@@ -17,10 +21,20 @@ Component({
 
   },
 
+  computed: {
+
+  },
+
   /**
    * 组件的方法列表
    */
   methods: {
+    onClick(e) {
+      const { index } = e.currentTarget.dataset
 
+      if (index == this.properties.current) return
+
+      this.triggerEvent('subclick', index)
+    }
   }
 })

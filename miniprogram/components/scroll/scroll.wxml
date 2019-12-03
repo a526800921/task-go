@@ -1,0 +1,9 @@
+<scroll-view 
+  class="scroll" 
+  scroll-y 
+  lower-threshold="20"
+  enable-back-to-top
+  bindscrolltolower="onScrolltolower"
+>
+  <slot></slot>
+</scroll-view>

@@ -1,1 +1,31 @@
 /* components/tabs/tabs.wxss */
+.tabs {
+  display: flex;
+  height: 88rpx;
+  border-bottom: 1rpx solid var(--border);
+  position: relative;
+  z-index: 0;
+}
+
+.tabs-nonius {
+  position: absolute;
+  z-index: -1;
+  background-color: var(--primary);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s;
+}
+
+.tabs-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: 0.2s;
+}
+
+.tabs-item-select {
+  color: #fff;
+}

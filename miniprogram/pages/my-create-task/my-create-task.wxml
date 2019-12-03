@@ -1,18 +1,29 @@
 <!--miniprogram/pages/my-create-task/my-create-task.wxml-->
-<task-desc></task-desc>
-<view 
-  class="my-create-task-item" 
-  wx:for="{{taskList}}" 
-  wx:key="index" 
-  bindtap="goTaskDetail" 
-  data-id="{{item.id}}"
->
-  <task-item item="{{item}}">
-    <!-- 未开始 -->
-    <text wx:if="{{item.status === 1}}" class="iconfont iconweikaishi my-create-task-time"></text>
-    <!-- 进行中 -->
-    <text wx:if="{{item.status === 2}}" class="iconfont iconrunning my-create-task-run"></text>
-    <!-- 已完成 -->
-    <text wx:if="{{item.status === 3}}" class="iconfont iconsuccess my-create-task-success"></text>
-  </task-item>
+<view class="my-create-task">
+  <view class="my-create-task-top">
+    <task-desc></task-desc>
+  </view>
+  <view class="my-create-task-scroll">
+    <scroll bindsubscrolltolower="onScrolltolower">
+      <view 
+        class="my-create-task-item" 
+        wx:for="{{taskList}}" 
+        wx:key="index" 
+        bindtap="goTaskDetail" 
+        data-id="{{item.id}}"
+      >
+        <task-item item="{{item}}" time="createTime">
+          <!-- 未开始 -->
+          <text wx:if="{{item.status === 1}}" class="iconfont iconweikaishi my-create-task-time"></text>
+          <!-- 进行中 -->
+          <text wx:if="{{item.status === 2}}" class="iconfont iconrunning my-create-task-run"></text>
+          <!-- 已完成 -->
+          <text wx:if="{{item.status === 3}}" class="iconfont iconsuccess my-create-task-success"></text>
+        </task-item>
+      </view>
+
+      <load-end wx:if="{{isEnd}}" />
+    </scroll>
+  </view>
 </view>
+

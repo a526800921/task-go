@@ -1,4 +1,11 @@
 <!--components/tabs/tabs.wxml-->
 <view class="tabs">
-  <view class="tabs-item"></view>
+  <view class="tabs-nonius" style="width: {{100 / tabs.length}}%; left: {{current * 100 / tabs.length}}%;"></view>
+  <view 
+    class="tabs-item {{current === index ? 'tabs-item-select' : ''}}"
+    wx:for="{{tabs}}"
+    wx:key="index"
+    bindtap="onClick"
+    data-index="{{index}}"
+  >{{item.title}}</view>
 </view>

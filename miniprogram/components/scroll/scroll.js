@@ -1,17 +1,10 @@
-// components/task-item/task-item.js
+// components/scroll/scroll.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    item: {
-      type: Object,
-      value: {}
-    },
-    time: {
-      type: String,
-      value: 'startTime'
-    },
+
   },
 
   /**
@@ -25,6 +18,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    onScrolltolower() {
 
+      this.triggerEvent('subscrolltolower')
+    }
   }
 })

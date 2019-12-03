@@ -10,14 +10,17 @@ global._Page({
       {
         title: '未开始',
         status: 1,
+        time: 'startTime',
       },
       {
         title: '进行中',
         status: 2,
+        time: 'updateTime',
       },
       {
         title: '已完成',
         status: 3,
+        time: 'updateTime',
       },
     ],
     selectTab: 0,
@@ -51,9 +54,9 @@ global._Page({
     },
   },
   onPageLoad() {
-    this.getData()
+    this.getData({ init: true })
   },
-  async getData() {
+  async getData({ init = false } = {}) {
     const { currentTab } = this.data
 
     if (!this.data.currentTask.taskList) {
@@ -72,6 +75,7 @@ global._Page({
 
     const { currentTaskList: taskList, currentPage: page, currentIsEnd: isEnd, pageSize } = this.data
 
+    if (taskList.length && init) return
     if (isEnd) return
 
     this.$native.call('showLoading', { title: '加载中...' })
@@ -92,6 +96,22 @@ global._Page({
         }
       }
     })
+  },
+  async tabChange(e) {
+    const selectTab = e.detail
+
+    await new Promise(resolve => this.setData({ selectTab }, resolve))
+
+    this.getData({ init: true })
+  },
+  goTaskDetail(e) {
+    // 去任务详情页
+    const { id } = e.currentTarget.dataset
+
+    this.$router.push(`/pages/task-detail/task-detail?id=${id}`)
+  },
+  onScrolltolower() {
+    this.getData()
   },
 
   /**

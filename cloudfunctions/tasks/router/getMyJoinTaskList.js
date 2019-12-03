@@ -58,6 +58,8 @@ module.exports = {
                                     return {
                                         maxPeople: task.maxPeople,
                                         startTime: task.startTime,
+                                        updateTime: task.updateTime,
+                                        createTime: task.createTime,
                                         status: task.status,
                                         title: task.title,
                                         id: task._id,

@@ -54,6 +54,7 @@ module.exports = {
                         maxPeople: 1,
                         peoples: 1,
                         startTime: 1,
+                        createTime: 1,
                         status: 1,
                         title: 1,
                         id: '$_id',

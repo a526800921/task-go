@@ -2,6 +2,9 @@ const verify = require('../utils/verify.js')
 const userStructure = require('../utils/user-structure.js')
 const { successPayload, failPayload } = require('../utils/utils.js')
 
+// 默认头像
+const defaultAvatar = 'cloud://test-pwezf.7465-test-pwezf-1300796464/static/image/666.jpg'
+
 module.exports = {
     POST({ payload, db, wxContext }) {
         // 登录/注册
@@ -26,7 +29,7 @@ module.exports = {
                                     data: {
                                         updateTime: now, // 用户修改信息时间
 
-                                        avatarUrl: payload.avatarUrl || '', // 头像
+                                        avatarUrl: payload.avatarUrl || defaultAvatar, // 头像
                                         nickName: payload.nickName || `用户_${(now + '').slice(-4)}`, // 昵称
                                         gender: payload.gender || 0, // 性别 0：未知、1：男、2：女
                                     }
@@ -41,7 +44,7 @@ module.exports = {
                                         createTime: now, // 用户创建时间
                                         updateTime: now, // 用户修改信息时间
 
-                                        avatarUrl: payload.avatarUrl || '', // 头像
+                                        avatarUrl: payload.avatarUrl || defaultAvatar, // 头像
                                         nickName: payload.nickName || `用户_${(now + '').slice(-4)}`, // 昵称
                                         gender: payload.gender || 0, // 性别 0：未知、1：男、2：女
                                     }

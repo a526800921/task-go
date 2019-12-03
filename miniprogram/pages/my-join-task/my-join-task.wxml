@@ -1,2 +1,23 @@
 <!--miniprogram/pages/my-join-task/my-join-task.wxml-->
-<tabs tabs="{{tabs}}"></tabs>
+<view class="my-join-task">
+  <view class="my-join-task-tabs">
+    <tabs tabs="{{tabs}}" current="{{selectTab}}" bindsubclick="tabChange"></tabs>
+    <task-desc />
+  </view>
+  
+  <view class="my-join-task-scroll">
+    <scroll bindsubscrolltolower="onScrolltolower">
+      <view 
+        class="my-join-task-item" 
+        wx:for="{{currentTaskList}}" 
+        wx:key="index" 
+        bindtap="goTaskDetail" 
+        data-id="{{item.id}}"
+      >
+        <task-item item="{{item}}" time="{{currentTab.time}}"></task-item>
+      </view>
+
+      <load-end wx:if="{{currentIsEnd}}" />
+    </scroll>
+  </view>
+</view>

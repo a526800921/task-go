@@ -1,17 +1,10 @@
-// components/task-item/task-item.js
+// components/load-end/load-end.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    item: {
-      type: Object,
-      value: {}
-    },
-    time: {
-      type: String,
-      value: 'startTime'
-    },
+
   },
 
   /**

@@ -17,7 +17,7 @@ App({
       // 云开发初始化
       const { env } = store.state.Root
       wx.cloud.init({
-        env: env === 'develop' ? 'test-pwezf' : '',
+        env: env === 'develop' ? 'test-pwezf' : 'prod-eeev0',
         traceUser: true,
       })
 

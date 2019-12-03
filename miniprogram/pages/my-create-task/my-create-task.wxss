@@ -1,4 +1,19 @@
 /* miniprogram/pages/my-create-task/my-create-task.wxss */
+.my-create-task {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-create-task-top {
+
+}
+
+.my-create-task-scroll {
+  flex: 1;
+  overflow: hidden;
+}
+
 .my-create-task-item {
   border-bottom: 1rpx solid var(--border);
 }

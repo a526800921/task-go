@@ -1,0 +1,8 @@
+/* components/load-end/load-end.wxss */
+.load-end {
+  height: 60rpx;
+  color: #999;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 26rpx;
+}

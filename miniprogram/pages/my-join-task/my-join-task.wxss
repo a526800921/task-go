@@ -1,1 +1,29 @@
 /* miniprogram/pages/my-join-task/my-join-task.wxss */
+.my-join-task {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-join-task-tabs {
+  
+}
+
+.my-join-task-scroll {
+  flex: 1;
+  overflow: hidden;
+}
+
+.my-join-task-item {
+  border-bottom: 1rpx solid var(--border);
+}
+
+.my-join-task-item:last-child {
+  border-bottom: 0;
+}
+
+.my-join-task-item .iconfont {
+  font-size: 40rpx;
+  margin-right: 14rpx;
+}
+
