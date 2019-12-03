@@ -2,12 +2,14 @@ const verify = require('../utils/verify.js')
 const userStructure = require('../utils/user-structure.js')
 const { successPayload, failPayload } = require('../utils/utils.js')
 
-// 默认头像
-const defaultAvatar = 'cloud://test-pwezf.7465-test-pwezf-1300796464/static/image/666.jpg'
-
 module.exports = {
     POST({ payload, db, wxContext }) {
         // 登录/注册
+        // 默认头像
+        const defaultAvatar = wxContext.ENV.indexOf('test') > -1 ?
+            'cloud://test-pwezf.7465-test-pwezf-1300796464/static/image/666.jpg' :
+            'cloud://prod-eeev0.7072-prod-eeev0-1300796464/static/images/666.jpg'
+
         return verify(payload, userStructure)
             .then(async () => {
                 const now = Date.now()

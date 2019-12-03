@@ -2,9 +2,10 @@
 const cloud = require('wx-server-sdk')
 const getMethod = require('./router')
 const { failPayload } = require('./utils/utils.js')
+const env = cloud.DYNAMIC_CURRENT_ENV
 
 cloud.init({
-  env: cloud.DYNAMIC_CURRENT_ENV
+  env
 })
 
 const db = cloud.database()
@@ -21,13 +22,19 @@ exports.main = async (event, context) => {
   const { path, method } = event
   const find = getMethod(path, method)
 
-  if (find) return find({ 
-    payload: event.payload, 
-    context, 
-    wxContext, 
-    db, 
-    _, 
-    log,
-  })
+  if (find) {
+    try {
+      return find({
+        payload: event.payload,
+        context,
+        wxContext,
+        db,
+        _,
+        log,
+      })
+    } catch (error) {
+      return failPayload(error, '运行错误')
+    }
+  }
   else return failPayload(null, '方法不存在')
 }

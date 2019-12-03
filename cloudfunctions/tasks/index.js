@@ -21,13 +21,19 @@ exports.main = async (event, context) => {
   const { path, method } = event
   const find = getMethod(path, method)
 
-  if (find) return find({ 
-    payload: event.payload, 
-    context, 
-    wxContext, 
-    db, 
-    _, 
-    log,
-  })
+  if (find) {
+    try {
+      return find({
+        payload: event.payload,
+        context,
+        wxContext,
+        db,
+        _,
+        log,
+      })
+    } catch (error) {
+      return failPayload(error, '运行错误')
+    }
+  }
   else return failPayload(null, '方法不存在')
 }
