@@ -8,7 +8,9 @@ const cloud = require('wx-server-sdk')
 const { successPayload, failPayload } = require('./utils')
 
 cloud.init({
-  env: cloud.DYNAMIC_CURRENT_ENV
+  // env: cloud.DYNAMIC_CURRENT_ENV
+  env: 'test-pwezf',
+  // env: 'prod-eeev0',
 })
 
 const db = cloud.database()

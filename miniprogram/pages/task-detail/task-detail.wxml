@@ -67,6 +67,7 @@
     <text wx:if="{{status === 7}}">任务已完成</text>
     <text wx:if="{{status === 8}}">任务未开始</text>
     <text wx:if="{{status === 9}}">任务人数已满</text>
+    <text wx:if="{{status === 10}}">等待他人完成</text>
   </login-button>
 </block>
 

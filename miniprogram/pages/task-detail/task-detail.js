@@ -39,6 +39,8 @@ global._Page({
       // 对加入用户而言
       // 6 -> 我已完成任务
       if (myInfo.hasJoined && status === 2 && myInfo.status === 1) return 6
+      // 7 -> 等待他人完成
+      if (myInfo.hasJoined && status === 2 && myInfo.status !== 1) return 10
       // 7 -> 任务已完成
       if (myInfo.hasJoined && status === 3) return 7
 
