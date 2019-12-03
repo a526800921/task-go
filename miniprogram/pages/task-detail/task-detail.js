@@ -17,17 +17,19 @@ global._Page({
     status() {
       // 底部按钮状态
       const now = Date.now()
-      const { id, myInfo, startTime, status } = this.data.taskDetail
+      const { id, myInfo, startTime, status, maxPeople, peopleList } = this.data.taskDetail
 
       if (!id) return -1
       // 8 -> 任务未开始 - 任务创建者无法退出
       if (myInfo.iCreated && startTime > now) return 8
+      // 9 -> 任务人数已满
+      if (!myInfo.hasJoined && startTime > now + 1000 * 60 * 5 && maxPeople === peopleList.length) return 9
       // 1 -> 可加入 - 任务开始前5分钟
       if (!myInfo.hasJoined && startTime > now + 1000 * 60 * 5) return 1
       // 2 -> 可退出 - 任务开始前10分钟
       if (myInfo.hasJoined && startTime > now + 1000 * 60 * 10) return 2
-      // 3 -> 任务即将开始 - 任务开始前5分钟以内
-      if (startTime > now && startTime < now + 1000 * 60 * 5) return 3
+      // 3 -> 任务即将开始 - 任务开始前10分钟以内
+      if (startTime > now && startTime < now + 1000 * 60 * 10) return 3
 
       // 对其他用户而言
       // 4 -> 任务进行中

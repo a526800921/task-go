@@ -42,6 +42,7 @@ module.exports = {
                 const user = usersGet.data.shift()
 
                 if (user.peoples.find(item => item.id === wxContext.OPENID)) return failPayload({ type: 5 }, '已加入任务')
+                if (user.peoples.length >= task.maxPeople) return failPayload({ type: 10 }, '任务人员已满')
                 
                 // 加入
                 return taskUsers
